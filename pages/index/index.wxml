@@ -1,0 +1,12 @@
+<!--pages/index/index.wxml-->
+
+<view class="container">
+  <image class="bgPic" wx:if="{{bgPic}}" src="{{bgPic}}"></image>
+  <view class="emptyBg" wx:else></view>
+</view>
+<view class="btnContainer">
+  <button data-way="camera" bind:tap="chooseImage">相机</button>
+  <button data-way="album" bind:tap="chooseImage">相册</button>
+  <button bind:tap="nextPage" disabled="{{!picChoosed}}">下一步</button>
+</view>
+<!-- <image src="../../image/img/two.gif" class="open_img"></image> -->
